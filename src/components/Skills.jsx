@@ -6,12 +6,12 @@ const Skills = () => {
   const [ShowBack, NotShowBack] = useState(false);
   return (
     <>
-      <div className="skill-front" onClick={() => NotShowFront(!ShowFront)}>
-        <h2>Front-End</h2>
+      <div className="skill__front" onClick={() => NotShowFront(!ShowFront)}>
+        <h2 className="skill__titre">Front-End</h2>
         {ShowFront ? <FontPage /> : null}
       </div>
-      <div className="skill-back" onClick={() => NotShowBack(!ShowBack)}>
-        <h2>Back-End</h2>
+      <div className="skill__back" onClick={() => NotShowBack(!ShowBack)}>
+        <h2 className="skill__titre">Back-End</h2>
         {ShowBack && <BackPage />}
       </div>
     </>
