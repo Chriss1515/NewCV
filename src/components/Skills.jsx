@@ -1,15 +1,18 @@
+import { useState } from "react";
+import FontPage from "../sous-components/font-end";
+import BackPage from "../sous-components/back-end";
 const Skills = () => {
+  const [ShowFront, NotShowFront] = useState(false);
+  const [ShowBack, NotShowBack] = useState(false);
   return (
     <>
-      <div className="skill-front">
+      <div className="skill-front" onClick={() => NotShowFront(!ShowFront)}>
         <h2>Front-End</h2>
-        <p>Anglais</p>
-        <p>espagnol</p>
+        {ShowFront ? <FontPage /> : null}
       </div>
-      <div className="skill-back">
+      <div className="skill-back" onClick={() => NotShowBack(!ShowBack)}>
         <h2>Back-End</h2>
-        <p>Anglais</p>
-        <p>espagnol</p>
+        {ShowBack && <BackPage />}
       </div>
     </>
   );
