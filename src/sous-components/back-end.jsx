@@ -2,7 +2,7 @@ const BackEnd = () => {
   return (
     <>
       <div className="front-content">
-        Content Back-end devras etre ici, vas-y code "HTML" "CSS" ...
+        Skills Back-end devras etre ici, vas-y code ...
       </div>
     </>
   );
